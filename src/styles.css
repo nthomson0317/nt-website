@@ -1,0 +1,188 @@
+/* ---------- Global reset ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* ---------- Base ---------- */
+  body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #111;
+    background: #fff;
+    padding: 2rem;
+    font-size: 18px;
+  }
+  
+  /* Centered content width */
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 0;
+    text-transform: uppercase; /* navbar-style text for text only */
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    color: #111;
+  }
+  
+  main p,
+  main li {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    color: #111;
+    opacity: 0.7;
+  }
+  
+  main h1,
+  main h2,
+  main h3,
+  main h4,
+  main h5,
+  main h6 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #111;
+    opacity: 0.9;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  
+  /* ---------- Navigation ---------- */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links > a,
+  .navbar a {
+    text-decoration: none;
+    color: #111;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+  }
+  
+  .nav-links > a:hover,
+  .navbar a:hover {
+    opacity: 1;
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #111;
+  }
+  
+  /* ---------- Headings ---------- */
+  h1,
+  h2 {
+    font-family: "Georgia", serif;
+    font-weight: 500;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* ---------- Home Page ---------- */
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .home-images {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+  
+  .home-images img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    opacity: 1; /* FULL opacity for images */
+  }
+  
+  /* Side-by-side on wider screens */
+  @media (min-width: 700px) {
+    .home-images {
+      flex-direction: row;
+    }
+  }
+  
+  /* ---------- Gallery Grid ---------- */
+  .gallery {
+    margin-top: 2rem;
+  }
+  
+  /* Always stacks into rows of 3 on desktop */
+  .grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* ---------- Cards ---------- */
+  .card {
+    width: 100%;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    opacity: 1; /* FULL opacity for gallery images */
+  }
+  
+  .card h3 {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  /* ---------- Writing ---------- */
+  .writing-item {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  
