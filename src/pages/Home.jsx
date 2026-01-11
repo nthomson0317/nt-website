@@ -5,7 +5,7 @@ export default function Home() {
     <section className="home">
 
       <div className="home-images">
-        <img src="/images/cherries.jpeg" alt="Cherries painting" />
+        <img src="images/annie-red-chairs.jpg" alt="Annie red chairs" />
         <img src="/images/goop-jars.jpeg" alt="Goop jars painting" />
         <img src="/images/nt.jpeg" alt="nt" /> 
         <img src="/images/granny-1.jpeg" alt="granny" />
