@@ -103,13 +103,12 @@
     margin-bottom: 1rem;
   }
   
-  /* ---------- Home Page ---------- */
-  .home {
+/* ---------- Home Page ---------- */
+.home {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 2rem;
-    text-align: center;
   }
   
   .home-images {
@@ -120,14 +119,14 @@
     margin-top: 2rem;
   }
   
+  /* THIS is the important part */
   .home-images img {
-    max-width: 400px;
-    width: 100%;
-    height: auto;
+    max-width: 100%;
+    height: auto;        /* keeps natural proportions */
+    width: auto;        /* prevents stretching */
     display: block;
-    border-radius: 4px;
-    opacity: 1; /* FULL opacity for images */
   }
+  
   
   /* Side-by-side on wider screens */
   @media (min-width: 700px) {
