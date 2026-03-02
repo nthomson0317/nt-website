@@ -89,8 +89,10 @@ main h6 {
 /* ---------- Headings ---------- */
 h1,
 h2 {
-  font-family: "Georgia", serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;  /* changed from Georgia serif */
   font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 h1 {
@@ -103,52 +105,87 @@ h2 {
   margin-bottom: 1rem;
 }
 
+/* ---------- Home Section ---------- */
+.home {
+  width: 100vw;               /* full viewport width */
+  margin-left: calc(-50vw + 50%);  /* break out of parent container */
+  margin-right: calc(-50vw + 50%);
+  padding: 0;
+}
 /* ---------- Home Archipelago ---------- */
 
 .archipelago {
   position: relative;
-  margin: 3rem auto 0;
+  margin: 0;
   width: 100%;
-  max-width: 1600px;
-  height: 1000px;
+  max-width: none;
+  height: 900px;
   overflow: visible;
+  padding: 0;
 }
 
-/* Shared image behavior — transparent PNGs */
+/* Shared image behavior */
 .archipelago-image {
   position: absolute;
   height: auto;
   display: block;
   background: none;
-}
-
-/* /images/tetris-paintings.png — top-left */
-.image-a {
-  top: 0;
-  left: 0;
-  width: 70%;
-  z-index: 2;
-}
-
-/* /images/tetris-paintings-2.png — interlocked diagonally below-right */
-.image-b {
-  top: 35%;                   /* moved down from 25% */
-  left: 30%;
-  width: 70%;
-  z-index: 1;
-}
-
-/* subtle edge so shapes read on white */
-.archipelago-image {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.03);
 }
 
+/* tetris-paintings.png — large anchor top-left, flush to screen edge */
+.image-a {
+  top: 0;
+  left: -8%;                  /* moved left by 5% */
+  width: 60%;
+  z-index: 1;
+}
+
+/* sam.png — tucked right next to tetris-1 */
+.image-c {
+  top: 5%;
+  left: 56%;                  /* moved left from 61% */
+  width: 19%;
+  z-index: 1;
+}
+
+/* cameron.png — tucked right next to sam */
+.image-d {
+  top: 8%;
+  left: 76%;                  /* moved left from 81% */
+  width: 18%;
+  z-index: 1;
+}
+
+/* tetris-paintings-2.png — shifted right to avoid overlap with tetris-1 */
+.image-b {
+  top: 45%;
+  left: 10%;                  /* moved left from 15% */
+  width: 60%;
+  z-index: 1;
+}
+
+/* betsy-2.png — adjusted to stay next to tetris-2 */
+.image-e {
+  top: 47%;
+  left: 71%;                  /* moved left from 76% */
+  width: 18%;
+  z-index: 1;
+}
+
+/* goop-jars.jpeg — tucked next to betsy */
+.image-f {
+  top: 50%;
+  left: 90%;                  /* moved left from 95% */
+  width: 18%;
+  z-index: 1;
+}
 /* Responsive adjustments */
 @media (max-width: 1000px) {
   .archipelago {
     height: auto;
-    max-width: 100%;
     margin-top: 2rem;
+    width: 100%;
   }
 
   .archipelago-image {
@@ -158,7 +195,6 @@ h2 {
     margin-bottom: 2rem;
   }
 }
-
 /* ---------- Gallery Grid ---------- */
 .gallery {
   margin-top: 2rem;

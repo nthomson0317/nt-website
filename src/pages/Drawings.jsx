@@ -3,8 +3,8 @@ import DrawingCard from "../components/DrawingCard";
 
 export default function Drawings() {
   const drawings = [
-    { title: "Sunset Dream", imageUrl: "/images/drawing-1.jpg" },
-    { title: "Quiet River", imageUrl: "/images/drawing-2.jpg" },
+    { title: "Graphite on toned paper", imageUrl: "/images/drawing-1.jpg" },
+    { title: "Graphite on toned paper", imageUrl: "/images/drawing-2.jpg" },
   ];
 
   return (
