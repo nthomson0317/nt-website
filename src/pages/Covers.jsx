@@ -3,7 +3,7 @@ import CoverCard from "../components/CoverCard";
 
 export default function Covers() {
   const covers = [
-    { title: "Sewanee Review, fall 2025", imageUrl: "/images/sewanee-cover.jpeg" },
+    { title: "Sewanee Review, fall 2025", imageUrl: "/images/sewanee-cover.jpeg", link: "https://thesewaneereview.com/issues/fall-2025" },
 
     // add more
   ];

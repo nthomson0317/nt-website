@@ -3,7 +3,7 @@ import PressCard from "../components/PressCard";
 
 export default function Press() {
   const articles = [
-    { title: "Circling", link: "https://circlingcircling.substack.com/p/nicholas-thomson-finds-cat-hairs" },
+    { title: "Circling Issue #36, featuring Nicholas Thomson", link: "https://circlingcircling.substack.com/p/nicholas-thomson-finds-cat-hairs", imageUrl: "/images/nt.webp" },
     // add more
   ];
 

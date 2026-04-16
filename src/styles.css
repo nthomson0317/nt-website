@@ -253,6 +253,22 @@ h2 {
   text-align: center;
 }
 
+/* ---------- Press ---------- */
+.press-item {
+  list-style: none;
+}
+
+.press-item a {
+  text-decoration: none;
+}
+
+.press-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+}
+
 /* ---------- Writing ---------- */
 .writing-item {
   margin-bottom: 1rem;
