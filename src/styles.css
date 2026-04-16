@@ -10,7 +10,7 @@ body {
   font-family: "Helvetica Neue", Arial, sans-serif;
   line-height: 1.6;
   color: #111;
-  background: #fff;
+  background: #f0ede8;
   padding: 2rem;
   font-size: 18px;
 }
@@ -107,13 +107,13 @@ h2 {
 
 /* ---------- Home Section ---------- */
 .home {
-  width: 100vw;               /* full viewport width */
-  margin-left: calc(-50vw + 50%);  /* break out of parent container */
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
   padding: 0;
 }
-/* ---------- Home Archipelago ---------- */
 
+/* ---------- Home Archipelago ---------- */
 .archipelago {
   position: relative;
   margin: 0;
@@ -124,62 +124,78 @@ h2 {
   padding: 0;
 }
 
-/* Shared image behavior */
-.archipelago-image {
+/* Frame wrapper — carries position + all frame styling */
+.frame-wrapper {
   position: absolute;
-  height: auto;
+  overflow: visible;
+  border: 7px solid #c9a84c;
+  box-shadow:
+    0 0 0 1px #8b6914,
+    0 0 0 2px #c9a84c,
+    0 0 0 3px #8b6914,
+    8px 10px 22px rgba(0, 0, 0, 0.35);
+}
+
+.frame-wrapper img {
   display: block;
-  background: none;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.03);
+  width: 100%;
+  height: auto;
 }
 
-/* tetris-paintings.png — large anchor top-left, flush to screen edge */
-.image-a {
-  top: 0;
-  left: -8%;                  /* moved left by 5% */
-  width: 60%;
-  z-index: 1;
+/* Inner mat line */
+.frame-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border: 1px solid rgba(139, 105, 20, 0.45);
+  pointer-events: none;
+  z-index: 2;
 }
 
-/* sam.png — tucked right next to tetris-1 */
-.image-c {
-  top: 5%;
-  left: 56%;                  /* moved left from 61% */
-  width: 19%;
-  z-index: 1;
+/* Corner bracket flourishes — L-shaped marks at all four corners */
+.frame-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: -11px;
+  pointer-events: none;
+  z-index: 5;
+  background:
+    /* top-left */
+    linear-gradient(to right, #8b6914 14px, transparent 14px) 0 0 / 14px 2px no-repeat,
+    linear-gradient(to bottom, #8b6914 14px, transparent 14px) 0 0 / 2px 14px no-repeat,
+    /* top-right */
+    linear-gradient(to left, #8b6914 14px, transparent 14px) 100% 0 / 14px 2px no-repeat,
+    linear-gradient(to bottom, #8b6914 14px, transparent 14px) 100% 0 / 2px 14px no-repeat,
+    /* bottom-left */
+    linear-gradient(to right, #8b6914 14px, transparent 14px) 0 100% / 14px 2px no-repeat,
+    linear-gradient(to top, #8b6914 14px, transparent 14px) 0 100% / 2px 14px no-repeat,
+    /* bottom-right */
+    linear-gradient(to left, #8b6914 14px, transparent 14px) 100% 100% / 14px 2px no-repeat,
+    linear-gradient(to top, #8b6914 14px, transparent 14px) 100% 100% / 2px 14px no-repeat;
 }
 
-/* cameron.png — tucked right next to sam */
-.image-d {
-  top: 8%;
-  left: 76%;                  /* moved left from 81% */
-  width: 18%;
-  z-index: 1;
-}
+/*
+  Layout calculated at 1400px viewport / 900px container.
+  Each image's x and y ranges verified non-overlapping.
+  Left column drifts top→bottom; right columns cross different y-bands.
+*/
+.image-b { top:  6%; left:  0%; width: 18%; transform: rotate(0.8deg);  z-index: 2; } /* nt-1        x:0–252   y:54–393  */
+.image-a { top:  0%; left: 19%; width: 11%; transform: rotate(-1deg);   z-index: 1; } /* self-port.  x:266–420 y:0–194   */
+.image-e { top:  3%; left: 31%; width: 13%; transform: rotate(1.2deg);  z-index: 1; } /* trevor      x:434–616 y:27–271  */
+.image-d { top:  2%; left: 57%; width: 14%; transform: rotate(-0.8deg); z-index: 1; } /* weber       x:798–994 y:18–271  */
+.image-c { top:  7%; left: 72%; width: 11%; transform: rotate(1.5deg);  z-index: 1; } /* simon-geb.  x:1008–1162 y:63–254*/
 
-/* tetris-paintings-2.png — shifted right to avoid overlap with tetris-1 */
-.image-b {
-  top: 45%;
-  left: 10%;                  /* moved left from 15% */
-  width: 60%;
-  z-index: 1;
-}
+.image-m { top: 30%; left: 83%; width: 14%; transform: rotate(1.2deg);  z-index: 1; } /* betsy       x:1162–1358 y:270–536*/
+.image-g { top: 32%; left: 31%; width: 16%; transform: rotate(-0.5deg); z-index: 1; } /* cameron     x:434–658 y:288–437 */
+.image-i { top: 32%; left: 48%; width: 16%; transform: rotate(1deg);    z-index: 2; } /* nt-2        x:672–896 y:288–571 */
 
-/* betsy-2.png — adjusted to stay next to tetris-2 */
-.image-e {
-  top: 47%;
-  left: 71%;                  /* moved left from 76% */
-  width: 18%;
-  z-index: 1;
-}
+.image-f { top: 46%; left:  0%; width: 14%; transform: rotate(-1deg);   z-index: 1; } /* sam         x:0–196   y:414–683 */
+.image-j { top: 53%; left: 15%; width: 11%; transform: rotate(-1.2deg); z-index: 1; } /* chris       x:210–364 y:477–688 */
+.image-h { top: 51%; left: 29%; width: 13%; transform: rotate(0.7deg);  z-index: 1; } /* graham      x:406–588 y:459–709 */
+.image-l { top: 54%; left: 66%; width: 16%; transform: rotate(-1deg);   z-index: 1; } /* annie       x:924–1148 y:486–635*/
 
-/* goop-jars.jpeg — tucked next to betsy */
-.image-f {
-  top: 50%;
-  left: 90%;                  /* moved left from 95% */
-  width: 18%;
-  z-index: 1;
-}
+.image-k { top: 65%; left: 48%; width: 17%; transform: rotate(0.5deg);  z-index: 2; } /* nt-3        x:672–910 y:585–886 */
+
 /* Responsive adjustments */
 @media (max-width: 1000px) {
   .archipelago {
