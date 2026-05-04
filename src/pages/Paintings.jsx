@@ -3,6 +3,9 @@ import PaintingCard from "../components/PaintingCard";
 
 const pleinAir = [
   { title: "Doorway", imageUrl: "/images/plein-air/doorway-1.webp" },
+  { title: "Green-Wood Cemetery", imageUrl: "/images/plein-air/green-wood-cemetery-1.webp" },
+  { title: "Green-Wood Cemetery", imageUrl: "/images/plein-air/green-wood-cemetery-2.webp" },
+  { title: "Souler Powered", imageUrl: "/images/plein-air/souler-powered.webp" },
 ];
 
 const interiors = [
@@ -11,6 +14,14 @@ const interiors = [
   { title: "Annie Red Chairs", imageUrl: "/images/interiors/annie-red-chairs.webp" },
   { title: "Betsy", imageUrl: "/images/interiors/betsy-2.webp" },
   { title: "The Cat Trappers", imageUrl: "/images/interiors/cat-trappers.webp" },
+];
+
+const stillLifes = [
+  { title: "Still Life", imageUrl: "/images/still-lifes/still-life-1.webp" },
+  { title: "Cherries", imageUrl: "/images/still-lifes/cherries.webp" },
+  { title: "Silver and Pomegranates", imageUrl: "/images/still-lifes/silver-and-pomegranates.webp" },
+  { title: "Skull and Plants", imageUrl: "/images/still-lifes/skull-and-plants.webp" },
+  { title: "Thanksgiving", imageUrl: "/images/still-lifes/thanksgiving.webp" },
 ];
 
 const portraits = [
@@ -38,6 +49,11 @@ export default function Paintings() {
       <h3 className="section-subheading">Interiors</h3>
       <div className="grid">
         {interiors.map((p, i) => <PaintingCard key={i} painting={p} />)}
+      </div>
+
+      <h3 className="section-subheading">Still Lifes</h3>
+      <div className="grid">
+        {stillLifes.map((p, i) => <PaintingCard key={i} painting={p} />)}
       </div>
 
       <h3 className="section-subheading">Portraits</h3>
