@@ -17,6 +17,7 @@ export default function Home() {
         <div className="frame-wrapper image-k"><img src="/images/archipelago/nt-3.webp" alt="NT 3" loading="eager" /></div>
         <div className="frame-wrapper image-l"><img src="/images/archipelago/annie-red-chairs.webp" alt="Annie red chairs" loading="eager" /></div>
         <div className="frame-wrapper image-m"><img src="/images/archipelago/Betsy.webp" alt="Betsy" loading="eager" /></div>
+        <div className="frame-wrapper image-n"><img src="/images/portraits/ruben.webp" alt="Ruben" loading="eager" /></div>
       </div>
     </section>
   );

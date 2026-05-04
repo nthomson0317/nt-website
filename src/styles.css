@@ -119,7 +119,7 @@ h2 {
   margin: 0;
   width: 100%;
   max-width: none;
-  height: 900px;
+  height: 960px;
   overflow: visible;
   padding: 0;
 }
@@ -195,6 +195,7 @@ h2 {
 .image-l { top: 54%; left: 66%; width: 16%; transform: rotate(-1deg);   z-index: 1; } /* annie       x:924–1148 y:486–635*/
 
 .image-k { top: 65%; left: 48%; width: 17%; transform: rotate(0.5deg);  z-index: 2; } /* nt-3        x:672–910 y:585–886 */
+.image-n { top: 73%; left: 66%; width: 14%; transform: rotate(-1deg);   z-index: 1; } /* ruben       x:924–1120 y:657–918 */
 
 /* Responsive adjustments */
 @media (max-width: 1000px) {
@@ -211,6 +212,12 @@ h2 {
     margin-bottom: 2rem;
   }
 }
+/* ---------- Section subheadings (Paintings page) ---------- */
+.section-subheading {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
 /* ---------- Gallery Grid ---------- */
 .gallery {
   margin-top: 2rem;

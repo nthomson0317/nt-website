@@ -1,30 +1,48 @@
 import React from "react";
 import PaintingCard from "../components/PaintingCard";
 
-export default function Paintings() {
-  const paintings = [
-    { title: "Annie Interior", imageUrl: "/images/annie-red-chairs.jpg" },
-    { title: "Still Life for C and K", imageUrl: "/images/still-life-1.jpg" },
-    { title: "Annie interior", imageUrl: "/images/annie-interior-2.jpeg" }, 
-    { title: "The Cat Trappers", imageUrl: "/images/cat-trappers.jpeg" },
-    { title: "Annie Interior", imageUrl: "/images/annie-interior.jpeg" },
-    { title: "Andrew Weber", imageUrl: "/images/andrew-weber.png" },
-    { title: "Simon Geballe", imageUrl: "/images/simon-geballe.png" },
-    { title: "Self Portrait", imageUrl: "/images/self-portrait.png" },
-    { title: "Doorway", imageUrl: "/images/doorway-1.jpg" }  
-    
-    
-    
-    // add more
-  ];
+const pleinAir = [
+  { title: "Doorway", imageUrl: "/images/plein-air/doorway-1.webp" },
+];
 
+const interiors = [
+  { title: "Annie Asleep", imageUrl: "/images/interiors/annie-asleep.webp" },
+  { title: "Annie Interior", imageUrl: "/images/interiors/annie-interior.webp" },
+  { title: "Annie Red Chairs", imageUrl: "/images/interiors/annie-red-chairs.webp" },
+  { title: "Betsy", imageUrl: "/images/interiors/betsy-2.webp" },
+  { title: "The Cat Trappers", imageUrl: "/images/interiors/cat-trappers.webp" },
+];
+
+const portraits = [
+  { title: "Graham", imageUrl: "/images/portraits/graham.webp" },
+  { title: "NT", imageUrl: "/images/portraits/nt-1.webp" },
+  { title: "NT", imageUrl: "/images/portraits/nt-2.webp" },
+  { title: "NT", imageUrl: "/images/portraits/nt-3.webp" },
+  { title: "Ruben", imageUrl: "/images/portraits/ruben.webp" },
+  { title: "Sam", imageUrl: "/images/portraits/sam.webp" },
+  { title: "Self Portrait", imageUrl: "/images/portraits/self-portrait.webp" },
+  { title: "Trevor", imageUrl: "/images/portraits/trevor.webp" },
+  { title: "Weber", imageUrl: "/images/portraits/weber.webp" },
+];
+
+export default function Paintings() {
   return (
     <section className="gallery">
       <h2>Paintings</h2>
+
+      <h3 className="section-subheading">Plein Air</h3>
       <div className="grid">
-        {paintings.map((p, i) => (
-          <PaintingCard key={i} painting={p} />
-        ))}
+        {pleinAir.map((p, i) => <PaintingCard key={i} painting={p} />)}
+      </div>
+
+      <h3 className="section-subheading">Interiors</h3>
+      <div className="grid">
+        {interiors.map((p, i) => <PaintingCard key={i} painting={p} />)}
+      </div>
+
+      <h3 className="section-subheading">Portraits</h3>
+      <div className="grid">
+        {portraits.map((p, i) => <PaintingCard key={i} painting={p} />)}
       </div>
     </section>
   );
