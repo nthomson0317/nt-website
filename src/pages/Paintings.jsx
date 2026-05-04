@@ -16,19 +16,11 @@ const interiors = [
   { title: "The Cat Trappers", imageUrl: "/images/interiors/cat-trappers.webp" },
 ];
 
-const stillLifes = [
-  { title: "Still Life", imageUrl: "/images/still-lifes/still-life-1.webp" },
-  { title: "Cherries", imageUrl: "/images/still-lifes/cherries.webp" },
-  { title: "Silver and Pomegranates", imageUrl: "/images/still-lifes/silver-and-pomegranates.webp" },
-  { title: "Skull and Plants", imageUrl: "/images/still-lifes/skull-and-plants.webp" },
-  { title: "Thanksgiving", imageUrl: "/images/still-lifes/thanksgiving.webp" },
-];
-
 const portraits = [
   { title: "Graham", imageUrl: "/images/portraits/graham.webp" },
-  { title: "NT", imageUrl: "/images/portraits/nt-1.webp" },
-  { title: "NT", imageUrl: "/images/portraits/nt-2.webp" },
-  { title: "NT", imageUrl: "/images/portraits/nt-3.webp" },
+  { title: "Self portrait", imageUrl: "/images/portraits/nt-1.webp" },
+  { title: "Self portrait", imageUrl: "/images/portraits/nt-2.webp" },
+  { title: "Self portrait", imageUrl: "/images/portraits/nt-3.webp" },
   { title: "Ruben", imageUrl: "/images/portraits/ruben.webp" },
   { title: "Sam", imageUrl: "/images/portraits/sam.webp" },
   { title: "Self Portrait", imageUrl: "/images/portraits/self-portrait.webp" },
@@ -49,11 +41,6 @@ export default function Paintings() {
       <h3 className="section-subheading">Interiors</h3>
       <div className="grid">
         {interiors.map((p, i) => <PaintingCard key={i} painting={p} />)}
-      </div>
-
-      <h3 className="section-subheading">Still Lifes</h3>
-      <div className="grid">
-        {stillLifes.map((p, i) => <PaintingCard key={i} painting={p} />)}
       </div>
 
       <h3 className="section-subheading">Portraits</h3>
