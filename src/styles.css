@@ -260,6 +260,12 @@ h2 {
   text-align: center;
 }
 
+.card-details {
+  text-align: center;
+  margin-top: 0.2rem;
+  opacity: 0.6;
+}
+
 /* ---------- Press ---------- */
 .press-item {
   list-style: none;
