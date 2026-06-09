@@ -124,16 +124,15 @@ h2 {
   padding: 0;
 }
 
-/* Frame wrapper — carries position + all frame styling */
+/* Frame wrapper — uses real frame photos via border-image */
 .frame-wrapper {
   position: absolute;
   overflow: visible;
-  border: 7px solid #c9a84c;
+  border-style: solid;
+  border-color: transparent;
   box-shadow:
-    0 0 0 1px #8b6914,
-    0 0 0 2px #c9a84c,
-    0 0 0 3px #8b6914,
-    8px 10px 22px rgba(0, 0, 0, 0.35);
+    6px 8px 20px rgba(0, 0, 0, 0.45),
+    2px 3px 6px  rgba(0, 0, 0, 0.2);
 }
 
 .frame-wrapper img {
@@ -142,37 +141,34 @@ h2 {
   height: auto;
 }
 
-/* Inner mat line */
+/* Inset shadow — simulates frame casting shadow onto painting surface */
 .frame-wrapper::after {
   content: '';
   position: absolute;
-  inset: 3px;
-  border: 1px solid rgba(139, 105, 20, 0.45);
+  inset: 0;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.35);
   pointer-events: none;
-  z-index: 2;
+  z-index: 3;
 }
 
-/* Corner bracket flourishes — L-shaped marks at all four corners */
-.frame-wrapper::before {
-  content: '';
-  position: absolute;
-  inset: -11px;
-  pointer-events: none;
-  z-index: 5;
-  background:
-    /* top-left */
-    linear-gradient(to right, #8b6914 14px, transparent 14px) 0 0 / 14px 2px no-repeat,
-    linear-gradient(to bottom, #8b6914 14px, transparent 14px) 0 0 / 2px 14px no-repeat,
-    /* top-right */
-    linear-gradient(to left, #8b6914 14px, transparent 14px) 100% 0 / 14px 2px no-repeat,
-    linear-gradient(to bottom, #8b6914 14px, transparent 14px) 100% 0 / 2px 14px no-repeat,
-    /* bottom-left */
-    linear-gradient(to right, #8b6914 14px, transparent 14px) 0 100% / 14px 2px no-repeat,
-    linear-gradient(to top, #8b6914 14px, transparent 14px) 0 100% / 2px 14px no-repeat,
-    /* bottom-right */
-    linear-gradient(to left, #8b6914 14px, transparent 14px) 100% 100% / 14px 2px no-repeat,
-    linear-gradient(to top, #8b6914 14px, transparent 14px) 100% 100% / 2px 14px no-repeat;
-}
+/* Border-image URLs are set via inline styles in Home.jsx (public folder assets
+   cannot be referenced via CSS url() in Create React App without ejecting) */
+
+/* Per-image border thickness — with box-sizing:border-box, painting fills (width - 2×border) */
+.frame-wrapper.image-a { border-width: 15px; }   /* self-portrait  — thin black */
+.frame-wrapper.image-b { border-width: 30px; }   /* nt-1           — wide gold */
+.frame-wrapper.image-c { border-width: 18px; }   /* simon-geballe  — medium gold */
+.frame-wrapper.image-d { border-width: 24px; }   /* weber          — ornate gold */
+.frame-wrapper.image-e { border-width: 22px; }   /* trevor         — gold */
+.frame-wrapper.image-f { border-width: 28px; }   /* sam            — wide gold */
+.frame-wrapper.image-g { border-width: 15px; }   /* cameron        — thin black */
+.frame-wrapper.image-h { border-width: 22px; }   /* graham         — gold */
+.frame-wrapper.image-i { border-width: 20px; }   /* nt-2           — gold */
+.frame-wrapper.image-j { border-width: 14px; }   /* chris          — thin black */
+.frame-wrapper.image-k { border-width: 35px; }   /* nt-3           — widest gold */
+.frame-wrapper.image-l { border-width: 22px; }   /* annie          — gold */
+.frame-wrapper.image-m { border-width: 25px; }   /* betsy          — gold */
+.frame-wrapper.image-n { border-width: 24px; }   /* ruben          — gold */
 
 /*
   Layout calculated at 1400px viewport / 900px container.
