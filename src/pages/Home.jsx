@@ -1,6 +1,6 @@
 import React from "react";
 
-// Slice values derived from measured inner opening positions in each cropped frame image:
+// Slice values match the measured inner-opening position in each final frame image:
 // Gold (1650×2025): inner opening at x≈310, y≈325 → "325 310"
 // Black (1528×1758): inner opening at x≈215, y≈200 → "200 215"
 const GOLD  = `url('/images/frames/ornate-golden-picture-frame-classic-decor-element/gold-frame-final.webp') 325 310`;
